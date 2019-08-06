@@ -14,7 +14,7 @@
 
         <!-- 数据库链接URL，用户名、密码 -->
         <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
-                        connectionURL="jdbc:mysql://114.116.4.196:3306/database_for_web?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true"
+                        connectionURL="jdbc:mysql://114.116.4.196:3306/database_for_web?characterEncoding=utf8&amp;useSSL=false&amp;serverTimezone=UTC&amp;rewriteBatchedStatements=true"
                         userId="root"
                         password="Lp184126">
         </jdbcConnection>
