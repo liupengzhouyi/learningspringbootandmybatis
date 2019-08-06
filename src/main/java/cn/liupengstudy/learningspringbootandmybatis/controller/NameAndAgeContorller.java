@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/nameAndAge")
 public class NameAndAgeContorller {
 
-    @Autowired
+    @Autowired(required=true)
     private NameAndAgeServiceImpl nameAndAgeService;
 
     @RequestMapping("save")
