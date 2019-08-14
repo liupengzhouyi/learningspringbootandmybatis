@@ -48,6 +48,14 @@
             <!-- 数据库表主键 -->
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
+
+        <table tableName="userLanding" domainObjectName="UserLanding" enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true">
+            <property name="useActualColumnNames" value="false"/>
+            <!-- 数据库表主键 -->
+            <generatedKey column="userID" sqlStatement="Mysql" identity="true"/>
+        </table>
+
     </context>
 
 </generatorConfiguration>

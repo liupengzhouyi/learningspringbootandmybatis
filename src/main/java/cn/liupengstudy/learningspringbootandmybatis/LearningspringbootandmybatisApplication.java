@@ -13,4 +13,6 @@ public class LearningspringbootandmybatisApplication {
         SpringApplication.run(LearningspringbootandmybatisApplication.class, args);
     }
 
+
+
 }
