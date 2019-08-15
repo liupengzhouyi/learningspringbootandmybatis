@@ -55,10 +55,10 @@
 
         <table tableName="userLanding" domainObjectName="UserLanding"
                enableCountByExample="flase"
-               enableUpdateByExample="true"
-               enableDeleteByExample="true"
+               enableUpdateByExample="false"
+               enableDeleteByExample="flase"
                enableSelectByExample="false"
-               selectByExampleQueryId="true">
+               selectByExampleQueryId="false">
             <property name="useActualColumnNames" value="false"/>
             <!-- 数据库表主键 -->
             <generatedKey column="userID" sqlStatement="Mysql" identity="true"/>

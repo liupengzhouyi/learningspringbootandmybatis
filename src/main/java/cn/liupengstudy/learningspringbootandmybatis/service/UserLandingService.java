@@ -1,8 +1,9 @@
-package cn.liupengstudy.learningspringbootandmybatis.mapper;
+package cn.liupengstudy.learningspringbootandmybatis.service;
 
 import cn.liupengstudy.learningspringbootandmybatis.pojo.UserLanding;
 
-public interface UserLandingMapper {
+public interface UserLandingService {
+
     int deleteByPrimaryKey(String userid);
 
     int insert(UserLanding record);

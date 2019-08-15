@@ -13,64 +13,6 @@
     <result column="landingVerificationCode" property="landingverificationcode" jdbcType="VARCHAR" />
     <result column="landingResults" property="landingresults" jdbcType="INTEGER" />
   </resultMap>
-  <sql id="Example_Where_Clause" >
-    <where >
-      <foreach collection="oredCriteria" item="criteria" separator="or" >
-        <if test="criteria.valid" >
-          <trim prefix="(" suffix=")" prefixOverrides="and" >
-            <foreach collection="criteria.criteria" item="criterion" >
-              <choose >
-                <when test="criterion.noValue" >
-                  and ${criterion.condition}
-                </when>
-                <when test="criterion.singleValue" >
-                  and ${criterion.condition} #{criterion.value}
-                </when>
-                <when test="criterion.betweenValue" >
-                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
-                </when>
-                <when test="criterion.listValue" >
-                  and ${criterion.condition}
-                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
-                    #{listItem}
-                  </foreach>
-                </when>
-              </choose>
-            </foreach>
-          </trim>
-        </if>
-      </foreach>
-    </where>
-  </sql>
-  <sql id="Update_By_Example_Where_Clause" >
-    <where >
-      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
-        <if test="criteria.valid" >
-          <trim prefix="(" suffix=")" prefixOverrides="and" >
-            <foreach collection="criteria.criteria" item="criterion" >
-              <choose >
-                <when test="criterion.noValue" >
-                  and ${criterion.condition}
-                </when>
-                <when test="criterion.singleValue" >
-                  and ${criterion.condition} #{criterion.value}
-                </when>
-                <when test="criterion.betweenValue" >
-                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
-                </when>
-                <when test="criterion.listValue" >
-                  and ${criterion.condition}
-                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
-                    #{listItem}
-                  </foreach>
-                </when>
-              </choose>
-            </foreach>
-          </trim>
-        </if>
-      </foreach>
-    </where>
-  </sql>
   <sql id="Base_Column_List" >
     userID, landingTime, landingDate, landingIPAdress, landingLongitude, landingLatitude, 
     landingPhoneNumber, landingEmail, landingVerificationCode, landingResults
@@ -84,12 +26,6 @@
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from userLanding
     where userID = #{userid,jdbcType=VARCHAR}
-  </delete>
-  <delete id="deleteByExample" parameterType="cn.liupengstudy.learningspringbootandmybatis.pojo.UserLandingExample" >
-    delete from userLanding
-    <if test="_parameter != null" >
-      <include refid="Example_Where_Clause" />
-    </if>
   </delete>
   <insert id="insert" parameterType="cn.liupengstudy.learningspringbootandmybatis.pojo.UserLanding" >
     <selectKey resultType="java.lang.String" keyProperty="userid" order="AFTER" >
@@ -168,60 +104,6 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByExampleSelective" parameterType="map" >
-    update userLanding
-    <set >
-      <if test="record.userid != null" >
-        userID = #{record.userid,jdbcType=VARCHAR},
-      </if>
-      <if test="record.landingtime != null" >
-        landingTime = #{record.landingtime,jdbcType=VARCHAR},
-      </if>
-      <if test="record.landingdate != null" >
-        landingDate = #{record.landingdate,jdbcType=VARCHAR},
-      </if>
-      <if test="record.landingipadress != null" >
-        landingIPAdress = #{record.landingipadress,jdbcType=VARCHAR},
-      </if>
-      <if test="record.landinglongitude != null" >
-        landingLongitude = #{record.landinglongitude,jdbcType=VARCHAR},
-      </if>
-      <if test="record.landinglatitude != null" >
-        landingLatitude = #{record.landinglatitude,jdbcType=VARCHAR},
-      </if>
-      <if test="record.landingphonenumber != null" >
-        landingPhoneNumber = #{record.landingphonenumber,jdbcType=VARCHAR},
-      </if>
-      <if test="record.landingemail != null" >
-        landingEmail = #{record.landingemail,jdbcType=VARCHAR},
-      </if>
-      <if test="record.landingverificationcode != null" >
-        landingVerificationCode = #{record.landingverificationcode,jdbcType=VARCHAR},
-      </if>
-      <if test="record.landingresults != null" >
-        landingResults = #{record.landingresults,jdbcType=INTEGER},
-      </if>
-    </set>
-    <if test="_parameter != null" >
-      <include refid="Update_By_Example_Where_Clause" />
-    </if>
-  </update>
-  <update id="updateByExample" parameterType="map" >
-    update userLanding
-    set userID = #{record.userid,jdbcType=VARCHAR},
-      landingTime = #{record.landingtime,jdbcType=VARCHAR},
-      landingDate = #{record.landingdate,jdbcType=VARCHAR},
-      landingIPAdress = #{record.landingipadress,jdbcType=VARCHAR},
-      landingLongitude = #{record.landinglongitude,jdbcType=VARCHAR},
-      landingLatitude = #{record.landinglatitude,jdbcType=VARCHAR},
-      landingPhoneNumber = #{record.landingphonenumber,jdbcType=VARCHAR},
-      landingEmail = #{record.landingemail,jdbcType=VARCHAR},
-      landingVerificationCode = #{record.landingverificationcode,jdbcType=VARCHAR},
-      landingResults = #{record.landingresults,jdbcType=INTEGER}
-    <if test="_parameter != null" >
-      <include refid="Update_By_Example_Where_Clause" />
-    </if>
-  </update>
   <update id="updateByPrimaryKeySelective" parameterType="cn.liupengstudy.learningspringbootandmybatis.pojo.UserLanding" >
     update userLanding
     <set >

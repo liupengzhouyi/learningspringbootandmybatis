@@ -93,11 +93,27 @@ public class UserLanding {
         this.landingverificationcode = landingverificationcode == null ? null : landingverificationcode.trim();
     }
 
-    public Integer getLandingresults() {
+    public Integer getLandingresults(Integer integer) {
         return landingresults;
     }
 
     public void setLandingresults(Integer landingresults) {
         this.landingresults = landingresults;
+    }
+
+    @Override
+    public String toString() {
+        return "UserLanding{" +
+                "userid='" + userid + '\'' +
+                ", landingtime='" + landingtime + '\'' +
+                ", landingdate='" + landingdate + '\'' +
+                ", landingipadress='" + landingipadress + '\'' +
+                ", landinglongitude='" + landinglongitude + '\'' +
+                ", landinglatitude='" + landinglatitude + '\'' +
+                ", landingphonenumber='" + landingphonenumber + '\'' +
+                ", landingemail='" + landingemail + '\'' +
+                ", landingverificationcode='" + landingverificationcode + '\'' +
+                ", landingresults=" + landingresults +
+                '}';
     }
 }
