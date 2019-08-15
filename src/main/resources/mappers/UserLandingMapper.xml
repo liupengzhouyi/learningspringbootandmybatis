@@ -2,7 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="cn.liupengstudy.learningspringbootandmybatis.mapper.UserLandingMapper" >
   <resultMap id="BaseResultMap" type="cn.liupengstudy.learningspringbootandmybatis.pojo.UserLanding" >
-    <id column="userID" property="userid" jdbcType="VARCHAR" />
+    <id column="mainKey" property="mainkey" jdbcType="INTEGER" />
+    <result column="userID" property="userid" jdbcType="VARCHAR" />
     <result column="landingTime" property="landingtime" jdbcType="VARCHAR" />
     <result column="landingDate" property="landingdate" jdbcType="VARCHAR" />
     <result column="landingIPAdress" property="landingipadress" jdbcType="VARCHAR" />
@@ -14,38 +15,41 @@
     <result column="landingResults" property="landingresults" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Base_Column_List" >
-    userID, landingTime, landingDate, landingIPAdress, landingLongitude, landingLatitude, 
+    mainKey, userID, landingTime, landingDate, landingIPAdress, landingLongitude, landingLatitude, 
     landingPhoneNumber, landingEmail, landingVerificationCode, landingResults
   </sql>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
     from userLanding
-    where userID = #{userid,jdbcType=VARCHAR}
+    where mainKey = #{mainkey,jdbcType=INTEGER}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from userLanding
-    where userID = #{userid,jdbcType=VARCHAR}
+    where mainKey = #{mainkey,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="cn.liupengstudy.learningspringbootandmybatis.pojo.UserLanding" >
-    <selectKey resultType="java.lang.String" keyProperty="userid" order="AFTER" >
+    <selectKey resultType="java.lang.Integer" keyProperty="mainkey" order="AFTER" >
       SELECT LAST_INSERT_ID()
     </selectKey>
-    insert into userLanding (landingTime, landingDate, landingIPAdress, 
-      landingLongitude, landingLatitude, landingPhoneNumber, 
-      landingEmail, landingVerificationCode, 
+    insert into userLanding (userID, landingTime, landingDate, 
+      landingIPAdress, landingLongitude, landingLatitude, 
+      landingPhoneNumber, landingEmail, landingVerificationCode, 
       landingResults)
-    values (#{landingtime,jdbcType=VARCHAR}, #{landingdate,jdbcType=VARCHAR}, #{landingipadress,jdbcType=VARCHAR}, 
-      #{landinglongitude,jdbcType=VARCHAR}, #{landinglatitude,jdbcType=VARCHAR}, #{landingphonenumber,jdbcType=VARCHAR}, 
-      #{landingemail,jdbcType=VARCHAR}, #{landingverificationcode,jdbcType=VARCHAR}, 
+    values (#{userid,jdbcType=VARCHAR}, #{landingtime,jdbcType=VARCHAR}, #{landingdate,jdbcType=VARCHAR}, 
+      #{landingipadress,jdbcType=VARCHAR}, #{landinglongitude,jdbcType=VARCHAR}, #{landinglatitude,jdbcType=VARCHAR}, 
+      #{landingphonenumber,jdbcType=VARCHAR}, #{landingemail,jdbcType=VARCHAR}, #{landingverificationcode,jdbcType=VARCHAR}, 
       #{landingresults,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="cn.liupengstudy.learningspringbootandmybatis.pojo.UserLanding" >
-    <selectKey resultType="java.lang.String" keyProperty="userid" order="AFTER" >
+    <selectKey resultType="java.lang.Integer" keyProperty="mainkey" order="AFTER" >
       SELECT LAST_INSERT_ID()
     </selectKey>
     insert into userLanding
     <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="userid != null" >
+        userID,
+      </if>
       <if test="landingtime != null" >
         landingTime,
       </if>
@@ -75,6 +79,9 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="userid != null" >
+        #{userid,jdbcType=VARCHAR},
+      </if>
       <if test="landingtime != null" >
         #{landingtime,jdbcType=VARCHAR},
       </if>
@@ -107,6 +114,9 @@
   <update id="updateByPrimaryKeySelective" parameterType="cn.liupengstudy.learningspringbootandmybatis.pojo.UserLanding" >
     update userLanding
     <set >
+      <if test="userid != null" >
+        userID = #{userid,jdbcType=VARCHAR},
+      </if>
       <if test="landingtime != null" >
         landingTime = #{landingtime,jdbcType=VARCHAR},
       </if>
@@ -135,11 +145,12 @@
         landingResults = #{landingresults,jdbcType=INTEGER},
       </if>
     </set>
-    where userID = #{userid,jdbcType=VARCHAR}
+    where mainKey = #{mainkey,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="cn.liupengstudy.learningspringbootandmybatis.pojo.UserLanding" >
     update userLanding
-    set landingTime = #{landingtime,jdbcType=VARCHAR},
+    set userID = #{userid,jdbcType=VARCHAR},
+      landingTime = #{landingtime,jdbcType=VARCHAR},
       landingDate = #{landingdate,jdbcType=VARCHAR},
       landingIPAdress = #{landingipadress,jdbcType=VARCHAR},
       landingLongitude = #{landinglongitude,jdbcType=VARCHAR},
@@ -148,6 +159,6 @@
       landingEmail = #{landingemail,jdbcType=VARCHAR},
       landingVerificationCode = #{landingverificationcode,jdbcType=VARCHAR},
       landingResults = #{landingresults,jdbcType=INTEGER}
-    where userID = #{userid,jdbcType=VARCHAR}
+    where mainKey = #{mainkey,jdbcType=INTEGER}
   </update>
 </mapper>

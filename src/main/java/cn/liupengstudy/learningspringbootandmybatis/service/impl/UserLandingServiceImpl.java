@@ -3,7 +3,6 @@ package cn.liupengstudy.learningspringbootandmybatis.service.impl;
 import cn.liupengstudy.learningspringbootandmybatis.mapper.UserLandingMapper;
 import cn.liupengstudy.learningspringbootandmybatis.pojo.UserLanding;
 import cn.liupengstudy.learningspringbootandmybatis.service.UserLandingService;
-import jdk.jfr.Timestamp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

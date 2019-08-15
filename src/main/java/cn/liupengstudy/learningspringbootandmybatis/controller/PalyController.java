@@ -23,6 +23,7 @@ public class PalyController {
     public String saveLanding() {
         System.out.println("hhhhhhhhhhhhhyyikjbj");
         UserLanding userLanding = new UserLanding();
+        userLanding.setMainkey(1);
         userLanding.setUserid("liupeng123456");
         userLanding.setLandingdate("2019-08-14");
         userLanding.setLandingtime("23:40");

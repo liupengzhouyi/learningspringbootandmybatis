@@ -1,6 +1,8 @@
 package cn.liupengstudy.learningspringbootandmybatis.pojo;
 
 public class UserLanding {
+    private Integer mainkey;
+
     private String userid;
 
     private String landingtime;
@@ -20,6 +22,14 @@ public class UserLanding {
     private String landingverificationcode;
 
     private Integer landingresults;
+
+    public Integer getMainkey() {
+        return mainkey;
+    }
+
+    public void setMainkey(Integer mainkey) {
+        this.mainkey = mainkey;
+    }
 
     public String getUserid() {
         return userid;
@@ -93,27 +103,11 @@ public class UserLanding {
         this.landingverificationcode = landingverificationcode == null ? null : landingverificationcode.trim();
     }
 
-    public Integer getLandingresults(Integer integer) {
+    public Integer getLandingresults() {
         return landingresults;
     }
 
     public void setLandingresults(Integer landingresults) {
         this.landingresults = landingresults;
-    }
-
-    @Override
-    public String toString() {
-        return "UserLanding{" +
-                "userid='" + userid + '\'' +
-                ", landingtime='" + landingtime + '\'' +
-                ", landingdate='" + landingdate + '\'' +
-                ", landingipadress='" + landingipadress + '\'' +
-                ", landinglongitude='" + landinglongitude + '\'' +
-                ", landinglatitude='" + landinglatitude + '\'' +
-                ", landingphonenumber='" + landingphonenumber + '\'' +
-                ", landingemail='" + landingemail + '\'' +
-                ", landingverificationcode='" + landingverificationcode + '\'' +
-                ", landingresults=" + landingresults +
-                '}';
     }
 }
