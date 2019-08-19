@@ -16,11 +16,19 @@ public class NameAndAgeServiceImpl implements NameAndAgeService {
 
     @Override
     public int insert(NameAndAge record) {
-        return nameAndAgeMapper.insert(record);
+        return this.getNameAndAgeMapper().insert(record);
     }
 
     @Override
     public int insertSelective(NameAndAge record) {
         return 0;
+    }
+
+    public NameAndAgeMapper getNameAndAgeMapper() {
+        return nameAndAgeMapper;
+    }
+
+    public void setNameAndAgeMapper(NameAndAgeMapper nameAndAgeMapper) {
+        this.nameAndAgeMapper = nameAndAgeMapper;
     }
 }

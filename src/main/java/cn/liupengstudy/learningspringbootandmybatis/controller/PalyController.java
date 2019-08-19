@@ -21,7 +21,6 @@ public class PalyController {
 
     @RequestMapping("saveLanding")
     public String saveLanding() {
-        System.out.println("hhhhhhhhhhhhhyyikjbj");
         UserLanding userLanding = new UserLanding();
         userLanding.setMainkey(1);
         userLanding.setUserid("liupeng123456");
