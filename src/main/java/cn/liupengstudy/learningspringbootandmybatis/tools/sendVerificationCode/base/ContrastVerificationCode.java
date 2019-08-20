@@ -1,4 +1,4 @@
-package cn.liupengstudy.learningspringbootandmybatis.tools.sendVerificationCode;
+package cn.liupengstudy.learningspringbootandmybatis.tools.sendVerificationCode.base;
 
 public class ContrastVerificationCode {
 
@@ -17,6 +17,7 @@ public class ContrastVerificationCode {
         this.setVerificationCodeI(verificationCodeI);
         this.setVerificationCodeII(verificationCodeII);
         this.function();
+
     }
 
     public void function() {
