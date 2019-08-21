@@ -7,6 +7,7 @@ package cn.liupengstudy.learningspringbootandmybatis.tools.sendVerificationCode.
 
 import java.io.IOException;
 
+import cn.liupengstudy.learningspringbootandmybatis.tools.sendVerificationCode.util.StringUtil;
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.HttpException;
 import org.apache.commons.httpclient.NameValuePair;
@@ -26,12 +27,12 @@ public class sendsms {
 		HttpClient client = new HttpClient();
 		PostMethod method = new PostMethod(Url);
 
-		client.getParams().setContentCharset("UTF-16");
+		client.getParams().setContentCharset("UTF-8");
 		method.setRequestHeader("ContentType","application/x-www-form-urlencoded;charset=GBK");
 
 		int mobile_code = (int)((Math.random()*9+1)*100000);
 
-		String content = new String("???????" + mobile_code + "???????????????");
+		String content = new String("您的验证码是：" + mobile_code + "。请不要把验证码泄露给其他人。");
 
 		NameValuePair[] data = {//????
 				//APIID?C73360990
@@ -40,7 +41,7 @@ public class sendsms {
 				//????? ??????->???????>????->API????->APIID
 				new NameValuePair("password", "17b32e66e729a3e2cae7596314332e8f"),
 				//???? ??????->???????>????->API????->APIKEY
-				// new NameValuePair("password", util.StringUtil.MD5Encode("??")),
+				//new NameValuePair("password", StringUtil.MD5Encode("password")),
 				new NameValuePair("mobile", "14747219744"),
 				new NameValuePair("content", content),
 		};
