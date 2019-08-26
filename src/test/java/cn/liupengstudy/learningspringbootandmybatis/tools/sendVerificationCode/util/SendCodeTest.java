@@ -20,7 +20,7 @@ class SendCodeTest {
 
     @BeforeEach
     void setUp() {
-        this.sendCode = new SendCode("14747219744", "111111");
+        this.sendCode = new SendCode("15004725734", "111111");
     }
 
     @AfterEach
