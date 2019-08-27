@@ -1,4 +1,3 @@
-/*
 package cn.liupengstudy.learningspringbootandmybatis.test;
 
 public class like {
@@ -24,4 +23,3 @@ public class like {
 		this.likeType = likeType;
 	}
 }
-*/
