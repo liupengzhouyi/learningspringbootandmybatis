@@ -2,6 +2,12 @@ package cn.liupengstudy.learningspringbootandmybatis.tools.getNowTime;
 
 import java.text.SimpleDateFormat;
 
+/**
+ * funtion:获取当前日期-时间
+ * author：刘鹏
+ * date:2019年8月29日
+ * time:11点53分
+ */
 public class GetNowDateTime extends BaseTime{
 
     /**

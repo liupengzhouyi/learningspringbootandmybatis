@@ -18,6 +18,9 @@ public class GetNowDate extends BaseTime {
         this.function();
     }
 
+    /**
+     * core function : get date
+     */
     public void function() {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         this.setInformation(dateFormat.format(this.getDate()));
