@@ -4,6 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class GetNowTime {
+
     public String GetNowTime() {
         return nowTime;
     }
