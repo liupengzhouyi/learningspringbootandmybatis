@@ -1,5 +1,6 @@
 package cn.liupengstudy.learningspringbootandmybatis.controller;
 
+import cn.liupengstudy.learningspringbootandmybatis.pojo.ActiveRequest;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -15,46 +16,4 @@ public class GetJsinController {
         return "active";
     }
 
-}
-
-class ActiveRequest {
-
-    private String sid;
-
-    private String biz;
-
-    private String text;
-
-    public String getSid() {
-        return sid;
-    }
-
-    public void setSid(String sid) {
-        this.sid = sid;
-    }
-
-    public String getBiz() {
-        return biz;
-    }
-
-    public void setBiz(String biz) {
-        this.biz = biz;
-    }
-
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
-    }
-
-    @Override
-    public String toString() {
-        return "ActiveRequest{" +
-                "sid='" + sid + '\'' +
-                ", biz='" + biz + '\'' +
-                ", text='" + text + '\'' +
-                '}';
-    }
 }

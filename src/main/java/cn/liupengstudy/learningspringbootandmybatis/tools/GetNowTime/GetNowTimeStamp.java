@@ -1,7 +1,4 @@
-package cn.liupengstudy.learningspringbootandmybatis.tools.getNowTime;
-
-import java.util.Calendar;
-import java.util.Date;
+package cn.liupengstudy.learningspringbootandmybatis.tools.GetNowTime;
 
 public class GetNowTimeStamp extends BaseTime {
 

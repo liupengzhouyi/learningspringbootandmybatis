@@ -1,4 +1,4 @@
-package cn.liupengstudy.learningspringbootandmybatis.tools.getNowTime;
+package cn.liupengstudy.learningspringbootandmybatis.tools.GetNowTime;
 
 import java.util.Date;
 
