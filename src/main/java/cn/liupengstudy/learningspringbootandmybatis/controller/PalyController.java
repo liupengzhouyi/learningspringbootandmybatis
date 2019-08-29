@@ -3,10 +3,11 @@ package cn.liupengstudy.learningspringbootandmybatis.controller;
 import cn.liupengstudy.learningspringbootandmybatis.pojo.UserLanding;
 import cn.liupengstudy.learningspringbootandmybatis.service.impl.UserLandingServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@Controller
 @RequestMapping("/index")
 public class PalyController {
 
@@ -17,6 +18,11 @@ public class PalyController {
     @RequestMapping("say")
     public String sayHelloWorld() {
         return "Hello World!";
+    }
+
+    @RequestMapping("index")
+    public String gotoIndex() {
+        return "index";
     }
 
     @RequestMapping("saveLanding")
