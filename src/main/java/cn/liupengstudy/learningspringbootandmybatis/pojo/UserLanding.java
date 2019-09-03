@@ -1,8 +1,15 @@
 package cn.liupengstudy.learningspringbootandmybatis.pojo;
 
+
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+@ApiModel("用户实体")
 public class UserLanding {
+
     private Integer mainkey;
 
+    @ApiModelProperty("用户 id")
     private String userid;
 
     private String landingtime;
