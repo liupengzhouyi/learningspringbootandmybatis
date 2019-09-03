@@ -3,11 +3,10 @@ package cn.liupengstudy.learningspringbootandmybatis.controller;
 import cn.liupengstudy.learningspringbootandmybatis.pojo.UserLanding;
 import cn.liupengstudy.learningspringbootandmybatis.service.impl.UserLandingServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 @RequestMapping("/index")
 public class PalyController {
 
