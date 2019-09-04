@@ -27,6 +27,21 @@ create table employeesLoginTable
     loginResults int null comment '登录结果',
     constraint employeesLoginTable_pk
         primary key (employeesLoginID)
+)comment '员工登录表';
+
+# 员工修改密码表
+create table employeesSettingPasswordTable
+(
+    settingPasswordID int(10) null comment '修改密码ID',
+    employeesID varchar(30) null comment '员工ID',
+    settingDateTime varchar(40) null comment '修改日期时间',
+    IPAdress varchar(20) null comment 'IP地址',
+    longitude double null comment '经度',
+    latitude double null comment '纬度',
+    settingResults int(2) null comment '修改结果'
 )
-    comment '员工登录表';
+    comment '员工修改密码表';
+
+
+
 
