@@ -4,10 +4,20 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
+<<<<<<< HEAD
+=======
+import springfox.documentation.service.ApiInfo;
+import springfox.documentation.service.Contact;
+>>>>>>> origin/master
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+<<<<<<< HEAD
+=======
+import java.util.Collections;
+
+>>>>>>> origin/master
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
@@ -19,4 +29,16 @@ public class SwaggerConfig {
                 .paths(PathSelectors.any())
                 .build();
     }
+<<<<<<< HEAD
+=======
+    private ApiInfo apiInfo() {
+        return new ApiInfo(
+                "Spring Boot 项目集成 Swagger 实例文档",
+                "我的博客网站：https://itweknow.cn，欢迎大家访问。",
+                "API V1.0",
+                "Terms of service",
+                new Contact("名字想好没", "https://itweknow.cn", "gancy.programmer@gmail.com"),
+                "Apache", "http://www.apache.org/", Collections.emptyList());
+    }
+>>>>>>> origin/master
 }

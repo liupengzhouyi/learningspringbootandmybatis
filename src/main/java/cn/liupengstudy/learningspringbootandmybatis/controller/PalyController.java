@@ -19,6 +19,11 @@ public class PalyController {
         return "Hello World!";
     }
 
+    @RequestMapping("index")
+    public String gotoIndex() {
+        return "index";
+    }
+
     @RequestMapping("saveLanding")
     public String saveLanding() {
         UserLanding userLanding = new UserLanding();

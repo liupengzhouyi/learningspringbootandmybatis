@@ -37,17 +37,6 @@
             <version>2.1.0</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.plugin</groupId>
-            <artifactId>spring-plugin-core</artifactId>
-            <version>1.2.0.RELEASE</version><!--$NO-MVN-MAN-VER$-->
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.plugin</groupId>
-            <artifactId>spring-plugin-metadata</artifactId>
-            <version>1.2.0.RELEASE</version><!--$NO-MVN-MAN-VER$-->
-        </dependency>
-
         <!-- 数据库连接 -->
         <dependency>
             <groupId>mysql</groupId>
@@ -178,10 +167,16 @@
             <version>2.9.2</version>
         </dependency>
 
+        <!--解决 Swagger Bug 强制依赖-->
         <dependency>
-            <groupId>org.codehaus.janino</groupId>
-            <artifactId>commons-compiler</artifactId>
-            <version>2.7.8</version>
+            <groupId>org.springframework.plugin</groupId>
+            <artifactId>spring-plugin-core</artifactId>
+            <version>1.2.0.RELEASE</version><!--$NO-MVN-MAN-VER$-->
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.plugin</groupId>
+            <artifactId>spring-plugin-metadata</artifactId>
+            <version>1.2.0.RELEASE</version><!--$NO-MVN-MAN-VER$-->
         </dependency>
 
 
