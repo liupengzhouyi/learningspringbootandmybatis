@@ -23,6 +23,7 @@ public class SwaggerConfig {
                 .paths(PathSelectors.any())
                 .build();
     }
+    
     private ApiInfo apiInfo() {
         return new ApiInfo(
                 "Spring Boot 项目集成 Swagger 实例文档",
