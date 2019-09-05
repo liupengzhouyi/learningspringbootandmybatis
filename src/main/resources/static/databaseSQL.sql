@@ -28,5 +28,17 @@ create table employeesLoginTable
     constraint employeesLoginTable_pk
         primary key (employeesLoginID)
 )
-    comment '员工登录表';
+comment '员工登录表';
+
+# 员工表职位表
+create table employeesPositionTable
+(
+	`positionID ` int(3) auto_increment comment '职位ID',
+	`positionName ` varchar(30) null comment '职位名称',
+	`positionDescription ` varchar(100) null comment '职位说明',
+	`salary ` double null comment '薪水',
+	constraint employeesPositionTable_pk
+		primary key (`positionID `)
+)
+comment '员工表职位表';
 
