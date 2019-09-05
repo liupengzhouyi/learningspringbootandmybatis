@@ -56,3 +56,13 @@ create table employeesImageTable
 )
     comment '员工图片表';
 
+# 员工修改密码表
+CREATE TABLE `employeesSettingPasswordTable` (
+    `settingPasswordID` int(10) DEFAULT NULL COMMENT '修改密码ID',
+    `employeesID` varchar(30) DEFAULT NULL COMMENT '员工ID',
+    `settingDateTime` varchar(40) DEFAULT NULL COMMENT '修改日期时间',
+    `IPAdress` varchar(20) DEFAULT NULL COMMENT 'IP地址',
+    `longitude` double DEFAULT NULL COMMENT '经度',
+    `latitude` double DEFAULT NULL COMMENT '纬度',
+    `settingResults` int(2) DEFAULT NULL COMMENT '修改结果'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='员工修改密码表';
