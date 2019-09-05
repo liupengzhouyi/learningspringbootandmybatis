@@ -66,3 +66,38 @@ CREATE TABLE `employeesSettingPasswordTable` (
     `latitude` double DEFAULT NULL COMMENT '纬度',
     `settingResults` int(2) DEFAULT NULL COMMENT '修改结果'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='员工修改密码表';
+
+
+# 用户表
+
+create table userTable
+(
+    userID int(6) auto_increment comment '用户注册ID',
+    userName varchar(30) null comment '用户昵称',
+    userPhoneNumber varchar(15) null comment '用户手机号码',
+    userPasswordValue varchar(30) null comment '用户密码值',
+    userRegisteredDate varchar(20) null comment '用户注册日期',
+    userRegisteredTime varchar(20) null comment '用户注册时间',
+    isCancellation int(2) null comment '是否注销',
+    userCancellationDate varchar(20) null comment '用户注销日期',
+    userCancellationTime varchar(20) null comment '用户注销时间',
+    constraint userTable_pk
+        primary key (userID)
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
