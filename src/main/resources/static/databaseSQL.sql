@@ -85,6 +85,21 @@ create table userTable
         primary key (userID)
 );
 
+# 用户登录表
+
+create table userLoginTable
+(
+    userLoginID int(10) auto_increment comment '用户登录ID',
+    userID varchar(30) null comment '用户ID',
+    loginDateTime varchar(40) null comment '登录时间',
+    IPAddress varchar(20) null comment '登录IP地址',
+    longitude double null comment '经度',
+    latitude double null comment '纬度',
+    loginResults int(2) null comment '登录结果',
+    constraint userLoginTable_pk
+        primary key (userLoginID)
+)
+    comment '用户登录表';
 
 
 
