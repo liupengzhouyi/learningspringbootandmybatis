@@ -229,6 +229,21 @@ create table dishesCommentsTable
 )
     comment '菜品评论表';
 
+# 菜品评论点赞表
+create table dishesCommentsPraiseTable
+(
+    dishesReviewLikeID int(6) auto_increment comment '菜品评论点赞ID',
+    dishesCommentsID int(6) null comment '菜品评论ID',
+    stepOrPraise int(2) null comment '踩Or赞',
+    userID varchar(30) null comment '用户ID',
+    operationTime varchar(40) null comment '操作时间',
+    constraint dishesCommentsPraiseTable_pk
+        primary key (dishesReviewLikeID)
+)
+    comment '菜品评论点赞表';
+
+
+
 
 
 
