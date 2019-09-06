@@ -190,7 +190,7 @@ create table signEditingTable
 create table orderTable
 (
     orderID int(10) auto_increment comment '订单ID',
-    `userID ` varchar(30) null comment '用户ID',
+    userID varchar(30) null comment '用户ID',
     orderDateTime varchar(40) null comment '订单日期',
     employeesID varchar(40) null comment '订单负责人',
     priceToPay double null comment '订单结算',
