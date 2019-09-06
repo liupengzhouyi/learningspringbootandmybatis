@@ -43,5 +43,22 @@ create table employeesSettingPasswordTable
     comment '员工修改密码表';
 
 
+# 用户图片表
+create table userImageTable
+(
+    imageID int(6) auto_increment comment '图片ID',
+    userID varchar(30) null comment '用户ID',
+    imageURL varchar(200) null comment '图片URL',
+    uploadDateTime varchar(40) null comment '图片上传时间',
+    isUsed int(2) null comment '图片是否在使用',
+    deprecationDateTime varchar(40) null comment '图片弃用日期时间',
+    constraint userImageTable_pk
+        primary key (imageID)
+)
+    comment '用户图片表';
+
+
+
+
 
 
