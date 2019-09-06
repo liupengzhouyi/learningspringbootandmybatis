@@ -71,6 +71,21 @@ create table userSettingPasswordTable
 )
     comment '用户修改密码表';
 
+# 菜品表
+create table dishesTable
+(
+    dishesID varchar(30) comment '菜品ID',
+    dishesPrice double null comment '菜品价格',
+    dishesRegisteredDateTime varchar(40) null comment '菜品注册日期',
+    whoRegisteredDishes varchar(30) null comment '菜品注册操作人',
+    dishesIsCancellation int(2) null comment '菜品是否注销',
+    disheslsCancellationDateTime varchar(40) null comment '菜品注销日期',
+    whoCancellationDishes varchar(30) null comment '菜品注销操作人',
+    constraint dishesTable_pk
+        primary key (dishesID)
+)
+    comment '菜品表';
+
 
 
 
