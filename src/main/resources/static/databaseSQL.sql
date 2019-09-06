@@ -153,6 +153,25 @@ create table signTable
 
 
 
+# 员工签到表
+
+create table employeesSignTable
+(
+    employeesSginID int(15) auto_increment comment '员工签到ID',
+    employeesID varchar(30) null comment '员工ID',
+    signDateTime varchar(40) null comment '签到时间',
+    signDistance int(2) null comment '签到评价（早/适/晚）',
+    timaGap int(3) null comment '签到时间差(min)',
+    longitude double null comment '定位地址-经度',
+    latitude double null comment '定位地址-纬度',
+    distance double null comment '签到距离差距',
+    constraint employeesSignTable_pk
+        primary key (employeesSginID)
+)
+    comment '员工签到表';
+
+
+
 
 
 
