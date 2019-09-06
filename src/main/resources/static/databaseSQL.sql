@@ -86,6 +86,19 @@ create table dishesTable
 )
     comment '菜品表';
 
+# 菜品图片表
+create table dishesImageTable
+(
+    dishesID varchar(30) null comment '菜品ID',
+    dishesImageURL varchar(200) null comment '菜品图片URL',
+    isUsed int(2) null comment '图片是否在使用',
+    uploadDateTime varchar(40) null comment '图片上传日期'
+)
+    comment '菜品图片表';
+
+
+
+
 
 
 
