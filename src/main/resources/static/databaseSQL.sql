@@ -96,6 +96,15 @@ create table dishesImageTable
 )
     comment '菜品图片表';
 
+# 菜品特征值表
+create table dishesCharacteristicsTable
+(
+    dishesID varchar(30) null comment '菜品ID',
+    characteristicsValueID int null comment '菜品特征值ID'
+)
+    comment '菜品特征值表';
+
+
 
 
 
