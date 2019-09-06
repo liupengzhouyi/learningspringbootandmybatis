@@ -242,6 +242,23 @@ create table dishesCommentsPraiseTable
 )
     comment '菜品评论点赞表';
 
+# 订单评论表
+create table orderCommentsTable
+(
+    dishesCommentsID int(6) auto_increment comment '订单评论ID',
+    commentDateTime varchar(30) null comment '评论时间',
+    comment varchar(300) null comment '评论内容',
+    praiseNumber int(4) null comment '赞数量',
+    stepNumber int(4) null comment '踩数量',
+    isDelete int(2) null comment '是否删除',
+    constraint orderCommentsTable_pk
+        primary key (dishesCommentsID)
+)
+    comment '订单评论表';
+
+
+
+
 
 
 
