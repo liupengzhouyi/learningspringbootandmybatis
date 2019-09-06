@@ -170,6 +170,23 @@ create table employeesSignTable
 )
     comment '员工签到表';
 
+# 员工签到编辑表
+
+create table signEditingTable
+(
+    editingID int(10) auto_increment comment '编辑表ID',
+    employeesEditingID varchar(40) null comment '员工签到ID',
+    masterID varchar(40) null comment '操作者ID',
+    ordDateTime varchar(40) null comment '原签到时间',
+    orderLongitude double null comment '原定位地址-经度',
+    orderLatitude double null comment '原定位地址-纬度',
+    constraint signEditingTable_pk
+        primary key (editingID)
+)
+    comment '员工签到编辑表';
+
+
+
 
 
 
