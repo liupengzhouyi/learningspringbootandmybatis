@@ -185,6 +185,21 @@ create table signEditingTable
 )
     comment '员工签到编辑表';
 
+# 订单表
+
+create table orderTable
+(
+    orderID int(10) auto_increment comment '订单ID',
+    `userID ` varchar(30) null comment '用户ID',
+    orderDateTime varchar(40) null comment '订单日期',
+    employeesID varchar(40) null comment '订单负责人',
+    priceToPay double null comment '订单结算',
+    price double null comment '实付价格',
+    userOrderNumber varchar(50) null comment '单号',
+    constraint orderTable_pk
+        primary key (orderID)
+)
+    comment '订单表';
 
 
 
