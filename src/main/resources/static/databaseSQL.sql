@@ -57,6 +57,20 @@ create table userImageTable
 )
     comment '用户图片表';
 
+create table userSettingPasswordTable
+(
+    settingPasswordID int(10) auto_increment comment '修改密码ID',
+    userID varchar(30) null comment '员工ID',
+    settingDateTime varchar(40) null comment '修改日期时间',
+    IPAdress varchar(20) null comment 'IP地址',
+    longitude double null comment '经度',
+    latitude double null comment '纬度',
+    settingResults int(2) null comment '修改结果',
+    constraint userSettingPasswordTable_pk
+        primary key (settingPasswordID)
+)
+    comment '用户修改密码表';
+
 
 
 
