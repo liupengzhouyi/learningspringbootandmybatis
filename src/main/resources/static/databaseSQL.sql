@@ -104,6 +104,16 @@ create table dishesCharacteristicsTable
 )
     comment '菜品特征值表';
 
+# 特征值表
+create table characteristicTable
+(
+    characteristicsValueID int auto_increment comment '特征值ID',
+    characteristics varchar(20) null comment '特征描述',
+    constraint characteristicTable_pk
+        primary key (characteristicsValueID)
+)
+    comment '特征值表';
+
 
 
 
