@@ -114,6 +114,43 @@ create table characteristicTable
 )
     comment '特征值表';
 
+create table signTable
+(
+    signID int(10) auto_increment comment '签到ID',
+    signName varchar(50) null comment '签到名称',
+    signBeginDateTime varchar(40) null comment '签到开始时间',
+    signEndDateTime varchar(40) null comment '签到结束时间',
+    longitude double null comment '定位地址-经度',
+    latitude double null comment '定位地址-纬度',
+    addSignDateTime varchar(40) null comment '添加签到时间',
+    whoAdd varchar(40) null comment '添加人',
+    isUsed int(2) null comment '签到是否在用',
+    signAbandonedDateTime varchar(40) null comment '签到废弃时间',
+    signIsEdited int(2) null comment '签到是否被编辑',
+    constraint signTable_pk
+        primary key (signID)
+)
+    comment '签到表';
+
+# 签到表
+create table signTable
+(
+    signID int(10) auto_increment comment '签到ID',
+    signName varchar(50) null comment '签到名称',
+    signBeginDateTime varchar(40) null comment '签到开始时间',
+    signEndDateTime varchar(40) null comment '签到结束时间',
+    longitude double null comment '定位地址-经度',
+    latitude double null comment '定位地址-纬度',
+    addSignDateTime varchar(40) null comment '添加签到时间',
+    whoAdd varchar(40) null comment '添加人',
+    isUsed int(2) null comment '签到是否在用',
+    signAbandonedDateTime varchar(40) null comment '签到废弃时间',
+    signIsEdited int(2) null comment '签到是否被编辑',
+    constraint signTable_pk
+        primary key (signID)
+)
+    comment '签到表';
+
 
 
 
