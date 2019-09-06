@@ -201,6 +201,21 @@ create table orderTable
 )
     comment '订单表';
 
+# 订单菜单表
+create table orderDishesTable
+(
+    orderMenuID int(12) auto_increment comment '订单菜单ID',
+    orderID int(10) null comment '订单ID',
+    dishesID varchar(30) null comment '菜品ID',
+    number int(3) null comment '数量',
+    dishesPriceToPay double null comment '菜品应付价格',
+    dishesPrice double null comment '菜品实付价格',
+    constraint orderDishesTable_pk
+        primary key (orderMenuID)
+)
+    comment '订单菜单表';
+
+
 
 
 
