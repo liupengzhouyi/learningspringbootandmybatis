@@ -19,7 +19,6 @@ public class JsonController {
         System.out.println(person);
         Person person1 = person;
         System.out.println(person1.toString());
-
         Map<String, Object> param = new HashMap<String, Object>();
         param.put("person", person);
         return param;
